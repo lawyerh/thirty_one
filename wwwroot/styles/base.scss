@@ -1,0 +1,372 @@
+// Import modules via all.scss
+@import "modules/modules";
+
+// import helpers
+@import "helpers/buttons";
+@import "helpers/shadowbox";
+@import "helpers/taunt";
+@import "helpers/mixins";
+
+// import responsive sheets
+@import "responsive/1phone";
+@import "responsive/2tablet";
+@import "responsive/3desktop";
+
+body{
+    background-image: url("../img/grain1.jpeg");
+    padding-top: 20px;
+}
+
+@import "helpers/header";
+@import "helpers/menu";
+
+// Player Select Page
+.player-select{
+
+    .f-wrap{
+        padding: 30px 50px 50px 50px;
+        .player-change{
+            margin: 10px 0;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 1.1em;
+            &:hover{
+                text-shadow: 2px 2px 2px #999;
+            }
+            &:active{
+                text-shadow: 1px 1px 3px $black;
+            }
+        }
+        p.sm-fz{
+            font-size: 0.7em;
+        }
+        .remove{
+            text-align: right;
+        }
+        .specific-spacer{
+            margin-top: 15px;
+            padding: 0 0 0 27px;
+        }
+    }
+}
+
+
+// Main Play Page
+.container{
+    background-color: $t-green;
+    background-image: url("/img/bg-fabric.png");
+    padding: 0 20px 20px 20px;
+    color: $white;
+    border: 5px solid $b-blue;
+    border-top: none;
+    h1{
+        margin-bottom: 20px;
+    }
+    h2{
+        margin: 15px 0 20px 0px;
+    }
+    .bubble-border{
+        background-color: $t-gray;
+        border: 11px solid $b-blue;
+        color: $b-blue;
+
+    }
+    .rules{
+        min-height: 300px;
+        margin: 30px 0px;
+        padding: 20px;
+    }
+    .sidebar{
+        // padding-right: 0px;
+       .sidebar-buffer{
+            min-height: 200px;
+            margin: 0 0 30px 0;
+            padding: 10px 20px 0 20px;
+            h2{
+                border-bottom: 1px solid $b-blue;
+                margin-bottom: 20px;
+                padding-bottom: 10px;
+            }
+            ul{
+                padding-left: 18px;
+            }
+        }
+        .deck-area{
+            position: relative;
+            .discard-img{
+                min-width: 63px;
+                min-height: 96px;
+                &:hover{
+                    transform: rotate(3deg);
+                }
+            }
+            h5.deck-label{
+                margin: 30px 0 10px 0;
+            }
+            .discard-bg{
+                position: absolute;
+                top: 3px;
+                left: 25px;
+                height: 92px;
+                width: 58px;
+                border: 2px dotted $b-blue;
+                box-shadow: 0px 0px 12px #777;
+                z-index: 50;
+
+            }
+            .discard-x{
+                position: absolute;
+                top: 23px;
+                left: 52px;
+                width: 0;
+                height: 45px;
+                border: 2px dotted $b-blue;
+                transform: rotate(-135deg);
+            }
+            .discard-y{
+                position: absolute;
+                top: 23px;
+                left: 52px;
+                width: 0;
+                height: 45px;
+                border: 2px dotted $b-blue;
+                transform: rotate(-225deg);
+            }
+            .core{
+                position: absolute;
+                top: 0px;
+                left: 0px;
+                z-index: 55;
+                transform: rotate(-5deg);
+                &:hover{
+                    transform: rotate(0deg);
+                    left: -1px;
+                }
+            }
+            .shift1{
+                position: absolute;
+                top: 0px;
+                left: 11px;
+                z-index: 50;
+                cursor: auto;
+            }
+            .shift2{
+                position: absolute;
+                top: 0px;
+                left: 5px;
+                z-index: 51;
+                cursor: auto;
+            }
+            .b-wrap{
+                text-align: center;
+                width: 171px;
+                margin: 0 auto
+            }
+            .b-wide{
+                width: 191px;
+            }
+            .deck-pusher{
+                margin: 20px 0 20px 0;
+            }
+            .draw-deck{
+                max-width: 80%;
+                margin: 0 auto;
+                cursor: pointer;
+                z-index: 51;
+                position: relative;
+                img{
+                    // box-shadow: 0px 0px 5px #777;
+                    max-width: 100%;;
+                    width: 100%;
+                    height: auto;
+                }
+            }
+        }
+    }
+    .game-area{
+        padding: 0 15px;
+        .hand-container{
+            margin-top: 20px;
+
+            .hand{
+                padding: 10px;
+                border: 1px solid $b-blue;
+                margin-bottom: 25px;
+                background-image: url("/img/bg-tile-tan.png");
+                min-height: 200px;
+                position: relative;
+                overflow: hidden;
+                .hand-labels{
+                    position: relative;
+
+                    h3{
+                        font-size: 1.3em;
+                    }
+                    // horizontal by cards
+                    .chip-box{
+                        position: absolute;
+                        top: 140px;
+                        left: 68px;
+                        &:hover{
+                            .chip{
+
+                            }
+                        }
+                        @keyframes spin {
+                            from {
+                                transform:rotate(0deg);
+                            }
+                            to {
+                                transform:rotate(360deg);
+                            }
+                        }
+                        @keyframes flip {
+                            from {
+                                transform:rotatey(0deg);
+                            }
+                            to {
+                                transform:rotatey(360deg);
+                            }
+                        }
+                        .chip{
+                            background-image: url("/img/blue-chip.png") ;
+                            background-size: 35px 35px;
+                            max-width: 35px;
+                            width: 35px;
+                            max-height: 35px;
+                            height: 35px;
+                            position: absolute;
+                            top: 0px;
+                            left: 25px;
+                            &:hover{
+                                animation-name: spin;
+                                // animation-duration: 1000ms;
+                                animation-duration: 3000ms;
+                                animation-iteration-count: infinite;
+                                animation-timing-function: linear;
+                            }
+                        }
+                        .chip:nth-child(2){
+                            left: 45px;
+                            background-image: url("/img/green-chip.png") ;
+                        }
+                        .chip:nth-child(3){
+                            left: 65px;
+                            background-image: url("/img/red-chip.png") ;
+                        }
+                    }
+                    // sideways by buttons
+                    // .chip-box{
+                    //     position: absolute;
+                    //     top:40px;
+                    //     left: 20px;
+
+                    //     .chip{
+                    //         background-image: url("/img/blue-chip.png") ;
+                    //         background-size: 35px 35px;
+                    //         max-width: 35px;
+                    //         width: 35px;
+                    //         max-height: 35px;
+                    //         height: 35px;
+                    //         position: absolute;
+                    //         left: 0px;
+                    //         top: 25px;
+                    //     }
+                    //     .chip:nth-child(2){
+                    //         top: 45px;
+                    //         background-image: url("/img/green-chip.png") ;
+                    //     }
+                    //     .chip:nth-child(3){
+                    //         top: 65px;
+                    //         background-image: url("/img/red-chip.png") ;
+                    //     }
+                    // }
+                }
+                .hand-buttons{
+                    .turn-indicator{
+                        font-size: 1.5em;
+                        min-height: 40px;
+                        i{
+                            width: 100%;
+                        }
+                    }
+                    button{
+                        width: 100%;
+                        text-align: center;
+                    }
+                }
+                .man-green{
+                    color: $t-l-green;
+                }
+                .player-card{
+                    // padding: 10px 0 0 0;
+                    .check{
+                        margin-left: 30px;
+                    }
+                    .card-anchor{
+                        margin: 0 auto;
+                        max-width: 226px;
+                        img{
+                            box-shadow: 0 0 2px #555;
+                            border-radius: 8px;
+                            max-height: 200px;
+                            height: auto;
+                            width: auto;
+                            margin: 0 auto;
+                            cursor: pointer;
+                            &:hover{
+                                max-height: calc(60% + 2px);
+                                max-width: calc(60% + 2px);
+                            }
+
+                        }
+                        .player-selected {
+                            border: 2px dotted green;
+                        }
+                    }
+                }
+                .player-card:nth-child(1){
+                    position: absolute;
+                    top: 50px;
+                    left: 40px;
+                    transform: rotate(-15deg);
+                    &:hover{
+                        top: 32px;
+                        left: 34px;
+                    }
+                }
+                .player-card:nth-child(2){
+                    position: absolute;
+                    top: 30px;
+                    left: 150px;
+                    &:hover{
+                        top: 26px;
+                    }
+                }
+                .player-card:nth-child(3){
+                    position: absolute;
+                    top: 50px;
+                    left: 255px;
+                    transform: rotate(15deg);
+                    &:hover{
+                        left: 257px;
+                    }
+                }
+                .player-card:nth-child(4){
+                    position: absolute;
+                    top: -30px;
+                    left: 500px;
+                    max-width: 110px;
+                    .card-anchor{
+                        img{
+                            max-width: 110px;
+                            &:hover{
+                                transform: rotate(2deg);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,793 @@
+.green-bg {
+  background-color: green;
+}
+
+.gray-bg {
+  background-color: #F4F7D9;
+}
+
+.blue-bg {
+  background-color: #04518C;
+}
+
+.red-bg {
+  background-color: #c00;
+}
+
+.yellow-bg {
+  background-color: yellow;
+}
+
+.orange-bg {
+  background-color: orange;
+}
+
+.black-bg {
+  background-color: black;
+}
+
+.purple-bg {
+  background-color: purple;
+}
+
+.dilb {
+  display: inline-block;
+}
+
+.hidden {
+  display: none;
+}
+
+.invisible {
+  visibility: hidden;
+}
+
+.tac {
+  text-align: center;
+}
+
+.tal {
+  text-align: left;
+}
+
+.tar {
+  text-align: right;
+}
+
+.red-text {
+  color: #c00;
+}
+
+.mh100 {
+  min-height: 100px;
+}
+
+.tl-arrow {
+  position: absolute;
+  top: -2px;
+  left: -7px;
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid #051c37;
+  transform: rotate(-45deg);
+}
+
+.tr-arrow {
+  position: absolute;
+  top: -2px;
+  right: -7px;
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid #051c37;
+  transform: rotate(45deg);
+}
+
+.bl-arrow {
+  position: absolute;
+  bottom: -2px;
+  left: -7px;
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid #051c37;
+  transform: rotate(-135deg);
+}
+
+.br-arrow {
+  position: absolute;
+  bottom: -3px;
+  right: -7px;
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid #051c37;
+  transform: rotate(135deg);
+}
+
+.float-right {
+  float: right;
+}
+
+.float-left {
+  float: left;
+}
+
+.clearfix {
+  clear: both;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+}
+
+.mt20 {
+  margin-top: 20px;
+}
+
+.ml20 {
+  margin-left: 20px;
+}
+
+.m20 {
+  margin: 20px;
+}
+
+.m0a {
+  margin: 0 auto;
+}
+
+button, .button .btn {
+  background-color: #051c37;
+  padding: 5px 15px;
+  cursor: pointer;
+  max-width: 100%;
+  border: none;
+  box-shadow: 0 6px #7d9e7c;
+  position: relative;
+  font-family: inherit;
+  font-size: inherit;
+  color: white;
+  display: inline-block;
+  letter-spacing: 1px;
+  margin: 0 0 15px 0;
+}
+button:hover, .button .btn:hover {
+  top: 2px;
+  transition: top 0.5s ease;
+  box-shadow: 0 3px #7d9e7c;
+  transition: box-shadow 0.5s ease;
+  background-color: rgba(5, 28, 55, 0.9);
+  transition: background-color 0.5s ease;
+}
+button:active, .button .btn:active {
+  box-shadow: 0 3px orange;
+}
+button:focus, .button .btn:focus {
+  outline: none;
+}
+
+.btn-x {
+  background-color: transparent;
+  box-shadow: none;
+  font-size: 1.5em;
+  margin: 0;
+  color: #3E423A;
+}
+.btn-x:hover {
+  color: #051c37;
+  box-shadow: none;
+  background-color: transparent;
+  top: 0;
+}
+
+.shadowbox {
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  opacity: 0.5;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  display: none;
+  z-index: 1000;
+}
+
+.shadow-content-container {
+  position: fixed;
+  top: 25%;
+  left: 50%;
+  max-width: 700px;
+  width: 50%;
+  max-height: 600px;
+  margin: 0 auto;
+  display: none;
+  z-index: 1001;
+}
+.shadow-content-container .inner-shadow {
+  position: relative;
+  top: 0;
+  left: -50%;
+  padding: 20px;
+}
+.shadow-content-container .inner-shadow .bubble-border {
+  width: 100%;
+  height: auto;
+  background-color: #F4F7D9;
+  border: 11px solid #051c37;
+  color: #051c37;
+}
+
+.game-rules {
+  max-width: 1130px;
+  width: 75%;
+  top: 94px;
+}
+.game-rules .inner-shadow .bubble-border {
+  overflow: scroll;
+  max-height: 500px;
+  padding: 25px;
+  overflow-x: hidden;
+}
+
+.shadow-bubble {
+  padding: 20px 20px 20px 20px;
+}
+
+.taunt-bubble {
+  position: absolute;
+  top: 173px;
+  left: 1490px;
+  height: 130px;
+  width: 130px;
+  border-radius: 10px;
+  background-color: white;
+  border: 3px solid #051c37;
+  z-index: 201;
+  box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.5);
+  color: #051c37;
+  font-size: 0.8em;
+  display: none;
+}
+.taunt-bubble .bubble-arrow {
+  position: relative;
+  box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.5);
+  z-index: 202;
+  bottom: -11px;
+  right: 39px;
+  width: 0;
+  height: 0;
+  border-left: 12px solid transparent;
+  border-right: 12px solid transparent;
+  border-bottom: 12px solid white;
+  transform: rotate(-90deg);
+  display: inline-block;
+}
+.taunt-bubble .bdr-arrow {
+  z-index: 200;
+  position: relative;
+  bottom: -11px;
+  right: 17px;
+  width: 0;
+  height: 0;
+  border-left: 11px solid transparent;
+  border-right: 11px solid transparent;
+  border-bottom: 11px solid #051c37;
+  transform: rotate(-90deg);
+  display: inline-block;
+}
+.taunt-bubble .text {
+  max-width: 80%;
+  margin: 5px;
+  vertical-align: top;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  .large, .medium {
+    display: none;
+  }
+}
+@media only screen and (min-device-width: 481px) and (max-device-width: 1023px) {
+  .small, .large {
+    display: none;
+  }
+}
+@media only screen and (min-device-width: 1024px) {
+  .small, .medium {
+    display: none;
+  }
+}
+body {
+  background-image: url("../img/grain1.jpeg");
+  padding-top: 20px;
+}
+
+.header {
+  position: relative;
+  width: 100%;
+  height: 90px;
+  background-color: #051c37;
+  color: white;
+  margin: 0 0 20px 0;
+  padding: 5px 0 0 0;
+  line-height: 50px;
+}
+.header h1.title {
+  z-index: 300;
+  font-size: 2.5em;
+  margin: 0;
+  font-family: "IBM Plex Sans", sans-serif;
+  font-style: italic;
+  font-weight: 600;
+  border-bottom: white;
+  margin-left: 40px;
+  line-height: 50px;
+}
+.header .bar1 {
+  position: absolute;
+  top: 0px;
+  left: -20px;
+  width: 30px;
+  height: 90px;
+  background-color: #051c37;
+  z-index: 205;
+}
+.header .bar2 {
+  position: absolute;
+  top: 0px;
+  right: -20px;
+  width: 30px;
+  height: 90px;
+  background-color: #051c37;
+  z-index: 205;
+}
+.header .har1 {
+  position: absolute;
+  top: 36px;
+  left: -110px;
+  width: 0;
+  height: 0;
+  border-left: 65px solid transparent;
+  border-right: 65px solid transparent;
+  border-bottom: 65px solid #051c37;
+  transform: rotate(135deg);
+}
+.header .har2 {
+  position: absolute;
+  top: 2px;
+  right: -80px;
+  width: 0;
+  height: 0;
+  border-bottom: 65px solid transparent;
+  border-top: 65px solid transparent;
+  border-left: 65px solid #051c37;
+  transform: rotate(135deg);
+}
+.header .har-low-1 {
+  position: absolute;
+  top: 80px;
+  left: -110px;
+  width: 0;
+  height: 0;
+  border-left: 63px solid transparent;
+  border-right: 63px solid transparent;
+  border-bottom: 63px solid #051c37;
+  transform: rotate(45deg);
+}
+.header .har-low-2 {
+  position: absolute;
+  top: 48px;
+  right: -80px;
+  width: 0;
+  height: 0;
+  border-bottom: 65px solid transparent;
+  border-top: 65px solid transparent;
+  border-left: 65px solid #051c37;
+  transform: rotate(-135deg);
+}
+.header .war1 {
+  position: absolute;
+  top: 90px;
+  left: -89px;
+  width: 0;
+  height: 0;
+  border-left: 0px solid transparent;
+  border-right: 69px solid transparent;
+  border-bottom: 24px solid white;
+  transform: rotate(180deg);
+}
+.header .war2 {
+  position: absolute;
+  top: 90px;
+  right: -89px;
+  width: 0;
+  height: 0;
+  border-right: 0px solid transparent;
+  border-left: 69px solid transparent;
+  border-bottom: 24px solid white;
+  transform: rotate(-180deg);
+}
+.header .base-bar {
+  position: absolute;
+  bottom: -4px;
+  left: -50px;
+  background-color: white;
+  height: 4px;
+  width: 110%;
+}
+
+nav.menu {
+  border-bottom: 1px solid white;
+  margin-left: 190px;
+  position: relative;
+}
+nav.menu .main-menu {
+  color: white;
+  padding: 10px 15px 17px 15px;
+  text-decoration: none;
+  margin-right: 5px;
+  line-height: 1em;
+  display: inline-block;
+  font-size: 1em;
+  cursor: pointer;
+}
+nav.menu .main-menu:hover {
+  color: rgba(5, 28, 55, 0.9);
+  background-color: white;
+  text-decoration: none;
+}
+nav.menu .submenu {
+  position: absolute;
+  top: 50px;
+  left: 0px;
+  display: inline-block;
+  height: 35px;
+  margin: 0;
+  padding: 0;
+}
+nav.menu .submenu .sub-item {
+  text-align: center;
+  line-height: 35px;
+  background: white;
+  margin: 0;
+  color: #051c37;
+  vertical-align: top;
+  border-right: 1px solid #051c37;
+  padding: 0 20px;
+  list-style: inside;
+  float: left;
+  display: inline-block;
+  transition: background-color 0.5s ease;
+  cursor: pointer;
+}
+nav.menu .submenu .sub-item:hover {
+  background-color: #999 0.8;
+  transition: background-color 0.5s ease;
+  text-shadow: 0px 1px 1px #888;
+  transition: text-shadow 0.5s ease;
+}
+nav.menu .submenu .sub-item:active {
+  transition: background-color 0.2s ease;
+  background-color: #A4CFBE;
+}
+nav.menu .submenu li:last-of-type {
+  border: none;
+}
+nav.menu .music {
+  left: 101px;
+  display: none;
+}
+nav.menu div.game-speed {
+  left: 146px;
+  display: none;
+}
+nav.menu div.taunt {
+  left: 49px;
+  display: none;
+}
+
+.player-select .f-wrap {
+  padding: 30px 50px 50px 50px;
+}
+.player-select .f-wrap .player-change {
+  margin: 10px 0;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 1.1em;
+}
+.player-select .f-wrap .player-change:hover {
+  text-shadow: 2px 2px 2px #999;
+}
+.player-select .f-wrap .player-change:active {
+  text-shadow: 1px 1px 3px black;
+}
+.player-select .f-wrap p.sm-fz {
+  font-size: 0.7em;
+}
+.player-select .f-wrap .remove {
+  text-align: right;
+}
+.player-select .f-wrap .specific-spacer {
+  margin-top: 15px;
+  padding: 0 0 0 27px;
+}
+
+.container {
+  background-color: #657a64;
+  background-image: url("/img/bg-fabric.png");
+  padding: 0 20px 20px 20px;
+  color: white;
+  border: 5px solid #051c37;
+  border-top: none;
+}
+.container h1 {
+  margin-bottom: 20px;
+}
+.container h2 {
+  margin: 15px 0 20px 0px;
+}
+.container .bubble-border {
+  background-color: #F4F7D9;
+  border: 11px solid #051c37;
+  color: #051c37;
+}
+.container .rules {
+  min-height: 300px;
+  margin: 30px 0px;
+  padding: 20px;
+}
+.container .sidebar .sidebar-buffer {
+  min-height: 200px;
+  margin: 0 0 30px 0;
+  padding: 10px 20px 0 20px;
+}
+.container .sidebar .sidebar-buffer h2 {
+  border-bottom: 1px solid #051c37;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+}
+.container .sidebar .sidebar-buffer ul {
+  padding-left: 18px;
+}
+.container .sidebar .deck-area {
+  position: relative;
+}
+.container .sidebar .deck-area .discard-img {
+  min-width: 63px;
+  min-height: 96px;
+}
+.container .sidebar .deck-area .discard-img:hover {
+  transform: rotate(3deg);
+}
+.container .sidebar .deck-area h5.deck-label {
+  margin: 30px 0 10px 0;
+}
+.container .sidebar .deck-area .discard-bg {
+  position: absolute;
+  top: 3px;
+  left: 25px;
+  height: 92px;
+  width: 58px;
+  border: 2px dotted #051c37;
+  box-shadow: 0px 0px 12px #777;
+  z-index: 50;
+}
+.container .sidebar .deck-area .discard-x {
+  position: absolute;
+  top: 23px;
+  left: 52px;
+  width: 0;
+  height: 45px;
+  border: 2px dotted #051c37;
+  transform: rotate(-135deg);
+}
+.container .sidebar .deck-area .discard-y {
+  position: absolute;
+  top: 23px;
+  left: 52px;
+  width: 0;
+  height: 45px;
+  border: 2px dotted #051c37;
+  transform: rotate(-225deg);
+}
+.container .sidebar .deck-area .core {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 55;
+  transform: rotate(-5deg);
+}
+.container .sidebar .deck-area .core:hover {
+  transform: rotate(0deg);
+  left: -1px;
+}
+.container .sidebar .deck-area .shift1 {
+  position: absolute;
+  top: 0px;
+  left: 11px;
+  z-index: 50;
+  cursor: auto;
+}
+.container .sidebar .deck-area .shift2 {
+  position: absolute;
+  top: 0px;
+  left: 5px;
+  z-index: 51;
+  cursor: auto;
+}
+.container .sidebar .deck-area .b-wrap {
+  text-align: center;
+  width: 171px;
+  margin: 0 auto;
+}
+.container .sidebar .deck-area .b-wide {
+  width: 191px;
+}
+.container .sidebar .deck-area .deck-pusher {
+  margin: 20px 0 20px 0;
+}
+.container .sidebar .deck-area .draw-deck {
+  max-width: 80%;
+  margin: 0 auto;
+  cursor: pointer;
+  z-index: 51;
+  position: relative;
+}
+.container .sidebar .deck-area .draw-deck img {
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+}
+.container .game-area {
+  padding: 0 15px;
+}
+.container .game-area .hand-container {
+  margin-top: 20px;
+}
+.container .game-area .hand-container .hand {
+  padding: 10px;
+  border: 1px solid #051c37;
+  margin-bottom: 25px;
+  background-image: url("/img/bg-tile-tan.png");
+  min-height: 200px;
+  position: relative;
+  overflow: hidden;
+}
+.container .game-area .hand-container .hand .hand-labels {
+  position: relative;
+}
+.container .game-area .hand-container .hand .hand-labels h3 {
+  font-size: 1.3em;
+}
+.container .game-area .hand-container .hand .hand-labels .chip-box {
+  position: absolute;
+  top: 140px;
+  left: 68px;
+}
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes flip {
+  from {
+    transform: rotatey(0deg);
+  }
+  to {
+    transform: rotatey(360deg);
+  }
+}
+.container .game-area .hand-container .hand .hand-labels .chip-box .chip {
+  background-image: url("/img/blue-chip.png");
+  background-size: 35px 35px;
+  max-width: 35px;
+  width: 35px;
+  max-height: 35px;
+  height: 35px;
+  position: absolute;
+  top: 0px;
+  left: 25px;
+}
+.container .game-area .hand-container .hand .hand-labels .chip-box .chip:hover {
+  animation-name: spin;
+  animation-duration: 3000ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+.container .game-area .hand-container .hand .hand-labels .chip-box .chip:nth-child(2) {
+  left: 45px;
+  background-image: url("/img/green-chip.png");
+}
+.container .game-area .hand-container .hand .hand-labels .chip-box .chip:nth-child(3) {
+  left: 65px;
+  background-image: url("/img/red-chip.png");
+}
+.container .game-area .hand-container .hand .hand-buttons .turn-indicator {
+  font-size: 1.5em;
+  min-height: 40px;
+}
+.container .game-area .hand-container .hand .hand-buttons .turn-indicator i {
+  width: 100%;
+}
+.container .game-area .hand-container .hand .hand-buttons button {
+  width: 100%;
+  text-align: center;
+}
+.container .game-area .hand-container .hand .man-green {
+  color: #7d9e7c;
+  box-shadow: 0 0 4px #333;
+}
+.container .game-area .hand-container .hand .player-card .check {
+  margin-left: 30px;
+}
+.container .game-area .hand-container .hand .player-card .card-anchor {
+  margin: 0 auto;
+  max-width: 226px;
+}
+.container .game-area .hand-container .hand .player-card .card-anchor img {
+  box-shadow: 0 0 2px #555;
+  border-radius: 8px;
+  max-height: 200px;
+  height: auto;
+  width: auto;
+  margin: 0 auto;
+  cursor: pointer;
+}
+.container .game-area .hand-container .hand .player-card .card-anchor img:hover {
+  max-height: calc(60% + 2px);
+  max-width: calc(60% + 2px);
+}
+.container .game-area .hand-container .hand .player-card .card-anchor .player-selected {
+  border: 2px dotted green;
+}
+.container .game-area .hand-container .hand .player-card:nth-child(1) {
+  position: absolute;
+  top: 50px;
+  left: 40px;
+  transform: rotate(-15deg);
+}
+.container .game-area .hand-container .hand .player-card:nth-child(1):hover {
+  top: 32px;
+  left: 34px;
+}
+.container .game-area .hand-container .hand .player-card:nth-child(2) {
+  position: absolute;
+  top: 30px;
+  left: 150px;
+}
+.container .game-area .hand-container .hand .player-card:nth-child(2):hover {
+  top: 26px;
+}
+.container .game-area .hand-container .hand .player-card:nth-child(3) {
+  position: absolute;
+  top: 50px;
+  left: 255px;
+  transform: rotate(15deg);
+}
+.container .game-area .hand-container .hand .player-card:nth-child(3):hover {
+  left: 257px;
+}
+.container .game-area .hand-container .hand .player-card:nth-child(4) {
+  position: absolute;
+  top: -30px;
+  left: 500px;
+  max-width: 110px;
+}
+.container .game-area .hand-container .hand .player-card:nth-child(4) .card-anchor img {
+  max-width: 110px;
+}
+.container .game-area .hand-container .hand .player-card:nth-child(4) .card-anchor img:hover {
+  transform: rotate(2deg);
+}

@@ -1,0 +1,47 @@
+// styles for buttons
+button, .button .btn{
+    background-color: $b-blue;
+    padding: 5px 15px;
+    cursor: pointer;
+    max-width: 100%;
+    // border-bottom: 6px solid transparent;
+    border: none;
+    box-shadow: 0 6px $t-l-green;
+    position: relative;
+    font-family: inherit;
+    font-size: inherit;
+    color: $white;
+    display: inline-block;
+    letter-spacing: 1px;
+    margin: 0 0 15px 0;
+
+    &:hover{
+        // border-top: 3px solid $t-l-green;
+        // border-bottom: 3px solid transparent;
+        top: 2px;
+        transition: top 0.5s ease;
+        box-shadow: 0 3px $t-l-green;
+        transition: box-shadow 0.5s ease;
+        background-color: $b-blue-8;
+        transition: background-color 0.5s ease;
+    }
+    &:active{
+        box-shadow: 0 3px $orange;
+    }
+    &:focus{
+        outline: none;
+    }
+}
+.btn-x{
+    background-color: transparent;
+    box-shadow: none;
+    font-size: 1.5em;
+    margin: 0;
+    color: $t-stone;
+    &:hover{
+        color: $b-blue;
+        box-shadow: none;
+        background-color: transparent;
+        top: 0;
+    }
+}

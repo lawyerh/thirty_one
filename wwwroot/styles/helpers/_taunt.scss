@@ -1,0 +1,51 @@
+.taunt-bubble{
+    position: absolute;
+    top: 173px;
+    left: 1490px;
+    height: 130px;
+    width: 130px;
+    border-radius: 10px;
+    background-color: $white;
+    border: 3px solid $b-blue;
+    z-index: 201;
+    box-shadow: inset 0px 0px 10px rgba(0,0,0,0.5);
+    color: $b-blue;
+    font-size: 0.8em;
+    display: none;
+    // padding: 5px;
+    .bubble-arrow{
+        position: relative;
+        box-shadow: inset 0px 0px 10px rgba(0,0,0,0.5);
+        z-index: 202;
+        bottom: -11px;
+        right: 39px;
+        width: 0;
+        height: 0;
+        border-left: 12px solid transparent;
+        border-right: 12px solid transparent;
+        border-bottom: 12px solid $white;
+        transform: rotate(-90deg);
+        display: inline-block;
+    }
+    .bdr-arrow{
+        z-index: 200;
+        position: relative;
+        bottom: -11px;
+        right: 17px;
+        width: 0;
+        height: 0;
+        border-left: 11px solid transparent;
+        border-right: 11px solid transparent;
+        border-bottom: 11px solid $b-blue;
+        transform: rotate(-90deg);
+        display: inline-block;
+    }
+    .text{
+        max-width: 80%;
+        margin: 5px;
+        vertical-align: top;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+}

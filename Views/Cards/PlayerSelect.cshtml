@@ -1,0 +1,73 @@
+@await Html.PartialAsync("Head.cshtml")
+<!-- end insert head -->
+<div class="container player-select">
+    <div class="header">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="har1"></div>
+        <div class="har-low-1"></div>
+        <div class="har2"></div>
+        <div class="har-low-2"></div>
+        <div class="war1"></div>
+        <div class="war2"></div>
+        <div class="base-bar"></div>
+        <div class="row">
+            <div class="col-4">
+                <h1 class="title">Casino 31</h1>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <div class="mx-auto w-50 bubble-border f-wrap">
+                <form class="" action="players" method="post">
+                    <div id="PlayerForm">
+                        <h2 class="tac">Create your players!</h2>
+                        <p class="sm-fz tac">Leave field empty for computer players.</p>
+                        <div class="form-group" id="player1">
+                            <p>Player 1 Name:</p>
+                            <input type="text" class="form-control ml-2" name="player1"  placeholder="...">
+                        </div>
+                        <div class="form-group" id="player2">
+                            <p>Player 2 Name:</p>
+                            <input type="text" class="form-control ml-2" name="player2" placeholder="...">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="player-change add" id="AddPlayer">+ Add A Player</div>
+                        </div>
+                        <div class="col-6">
+                            <div class="player-change remove" id="RemovePlayer"> - Remove Player</div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-3"></div>
+                        <div class="col-6">
+                            <div class="specific-spacer">
+                                <button class="button" id="StartGame">Start Game!</button>
+                            </div>
+                        </div>
+                        <div class="col-3"></div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Mobile not supported -->
+<div class="shadowbox" id="mobile_viewer_shadow_box">
+</div>
+<div class="shadow-content-container" id="mobile_viewer">
+    <div class="inner-shadow">
+        <div class="bubble-border">
+            <div class="row">
+                <div class="col-12">
+                    <h2 class="tac">Desktop Support Only</h2>
+                      <p>Sorry, this website cannot be viewed from a mobile device. Please check us out from a laptop or desktop computer!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

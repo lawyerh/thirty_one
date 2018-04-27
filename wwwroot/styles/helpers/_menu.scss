@@ -1,0 +1,77 @@
+nav.menu{
+    border-bottom: 1px solid $white;
+    margin-left: 190px;
+    position: relative;
+    .main-menu{
+        color: white;
+        padding: 10px 15px 17px 15px;
+        text-decoration: none;
+        margin-right: 5px;
+        line-height: 1em;
+        display: inline-block;
+        font-size: 1em;
+        cursor: pointer;
+        &:hover{
+            color: $b-blue-8;
+            background-color: white;
+            text-decoration: none;
+            // text-shadow: 0 0 3px black;
+        }
+    }
+    .submenu{
+        position: absolute;
+        top: 50px;
+        left: 0px;
+        display: inline-block;
+        height: 35px;
+        margin: 0;
+        padding: 0;
+        .sub-item{
+            // display: none;
+            text-align: center;
+            line-height: 35px;
+            background: $white;
+            margin: 0;
+            color: $b-blue;
+            vertical-align: top;
+            border-right: 1px solid $b-blue;
+            padding: 0 20px;
+            list-style: inside;
+            float: left;
+            display: inline-block;
+            transition: background-color 0.5s ease;
+            cursor: pointer;
+            &:hover{
+                background-color: #999 0.8;
+                transition: background-color 0.5s ease;
+                // color: $black;
+                text-shadow: 0px 1px 1px #888;
+                transition: text-shadow 0.5s ease;
+            }
+            &:active{
+                transition: background-color 0.2s ease;
+                background-color: $t-rain;
+            }
+        }
+        li:last-of-type{
+            border: none;
+        }
+    }
+    // &:hover{
+    //     .sub-item{
+    //         border-top: 1px solid $b-blue;
+    //     }
+    // }
+    .music{
+        left: 101px;
+        display: none;
+    }
+    div.game-speed{
+        left: 146px;
+        display: none;
+    }
+    div.taunt{
+        left: 49px;
+        display: none;
+    }
+}

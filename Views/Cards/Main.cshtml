@@ -1,0 +1,242 @@
+<!-- insert head -->
+@await Html.PartialAsync("Head.cshtml")
+<script src="~/js/main.js"></script>
+<!-- end insert head -->
+<div class="container">
+    <div class="header">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="har1"></div>
+        <div class="har-low-1"></div>
+        <div class="har2"></div>
+        <div class="har-low-2"></div>
+        <div class="war1"></div>
+        <div class="war2"></div>
+        <div class="base-bar"></div>
+        <div class="row">
+            <div class="col-4">
+                <h1 class="title">Casino 31</h1>
+            </div>
+            <div class="col-8">
+                <nav class="menu">
+                    <div class="main-menu" id="show_rules_menu">Show Rules</div>
+                    <div class="main-menu" id="music">Music</div>
+                    <div class="submenu clearfix music">
+                        <div class="sub-item" id="music-on">On</div>
+                        <div class="sub-item" id="music-off">Off</div>
+                    </div>
+                    <div class="main-menu" id="game-speed">Game Speed</div>
+                    <div class="submenu clearfix game-speed">
+                        <div class="sub-item" id="speed-slow">Slow</div>
+                        <div class="sub-item" id="speed-normal">Normal</div>
+                        <div class="sub-item" id="speed-fast">Fast</div>
+                    </div>
+                    <div class="main-menu" id="taunt">Chat</div>
+                    <div class="submenu clearfix taunt">
+                        <div class="sub-item" id="taunt-off">None</div>
+                        <div class="sub-item" id="taunt-shakespeare">Shakespeare</div>
+                        <div class="sub-item" id="taunt-mp">Monty Python</div>
+                        <div class="sub-item" id="taunt-tt">Trash Talk</div>
+                    </div>
+                    <div class="main-menu">New Game</div>
+                </nav>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12 col-md-3 sidebar">
+            <div class="sidebar-buffer bubble-border">
+                <div class="row deck-area">
+                    <div class="col-12">
+                        <div class="row">
+                            <div class="col-12">
+                                <h4>Draw from:</h4>
+                            </div>
+                        </div>
+                        <div class="row draw">
+                            <div class="col-12">
+                                <div class="row mh100">
+                                    <div class="col-6">
+                                        <div class="draw-deck" id="DrawCard">
+                                            <img class="core" src="~/img/cardback.png" alt="">
+                                            <img class="shift1" src="~/img/cardback.png" alt="">
+                                            <img class="shift2" src="~/img/cardback.png" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="discard-bg"></div>
+                                        <div class="discard-x"></div>
+                                        <div class="discard-y"></div>
+                                        <div class="draw-deck" id="DiscardCard">
+                                            <img src="~/img/transparent1.png" alt="discard" class="discard-img" id="discard_pile_top_card">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-6">
+                                        <h5 class="tac deck-label">Deck</h5>
+                                    </div>
+                                    <div class="col-6">
+                                        <h5 class="tac deck-label">Discard</h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-md-9">
+            <div class="game-area bubble-border">
+                <div class="row hand-container">
+                    <div class="col-12" id="player_hands">
+                        <!-- START OF ONE HAND -->
+                        <!-- END OF HAND  --><!-- START OF ONE HAND -->
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+<div class="shadowbox"></div>
+<div class="shadow-content-container ">
+    <div class="inner-shadow">
+        <div class="bubble-border">
+            <div class="row">
+                <div class="col-12">
+                    <h2 class="tac">For each shadowbox you want to build:</h2>
+                    <ul>
+                        <li>class "shadowbox" default is hidden, you'll need to show it as part of your call.</li>
+                        <li>dupe all of the dom structure inside and including "shadow-content-container"</li>
+                        <li>profit</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Change of Turn Indication for human players -->
+<div class="shadowbox" id="change_turn_shadow_box">
+</div>
+<div class="shadow-content-container" id="change_turn">
+</div>
+<!-- game rules shadowbox -->
+<div class="shadowbox" id="game_rules_shadow_box">
+</div>
+<div class="shadow-content-container game-rules" id="game_rules">
+    <div class="inner-shadow">
+        <div class="row">
+            <div class="col-12">
+                <div class="rules bubble-border">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="row">
+                                <div class="col-11">
+                                    <h2>Objective:</h2>
+                                </div>
+                                <div class="col-1">
+                                    <button class="button btn-x" id="Close_Rules">X</button>
+                                </div>
+                            </div>
+                            <p>The goal is to obtain a suited-hand that totals 31 points, or to have a hand of higher value than all other players at the showdown.</p>
+                            <h2>Play:</h2>
+                            <p>All players begin with 3 chips. On each turn, players take one card from either the top of the deck or from the discard pile. A turn ends by discarding a card.</p>
+                            <p>Players take turns until one player is satisfied that the cards they hold will likely beat all other players and "knocks" on the table. Once a knock has been made, all other players get one more turn to exchange cards before the showdown where all players reveal their hands and compare values.</p>
+                            <h2>Scoring:</h2>
+                            <p>Aces: 11 points; Face-cards :10 points; all other cards count their face value</p>
+                            <p>If the player who knocked does not have the highest scoring hand at the showdown, they lose a chip to the pot.  However, if they do have the highest scoring hand, the player with the lowest hand loses a chip to the pot instead.</p>
+                            <p>If there is a tie for the highest score, the player with the highest-ranking card(s) wins. [e.g. K, Q, 6 (total 26) would beat Q, 9, 7 (also 26)]</p>
+                            <p>If at any point a player holds exactly 31 points during the game, or obtains three aces (worth 32 points), the game immediately ends and all other players lose a chip to the pot.</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12 clearfix">
+                            <div class="float-right">
+                                <button class="button" id="PlayGame">Got it, let's play!</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Show Rules -->
+
+<div class="shadowbox" id="menu_rules_shadow_box">
+</div>
+<div class="shadow-content-container game-rules" id="menu_rules">
+    <div class="inner-shadow">
+        <div class="row">
+            <div class="col-12">
+                <div class="rules bubble-border">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="row">
+                                <div class="col-11">
+                                    <h2>Objective:</h2>
+                                </div>
+                                <div class="col-1">
+                                    <button class="button btn-x" id="close_menu_rules">X</button>
+                                </div>
+                            </div>
+                            <p>The goal is to obtain a suited-hand that totals 31 points, or to have a hand of higher value than all other players at the showdown.</p>
+                            <h2>Play:</h2>
+                            <p>All players begin with 3 chips. On each turn, players take one card from either the top of the deck or from the discard pile. A turn ends by discarding a card.</p>
+                            <p>Players take turns until one player is satisfied that the cards they hold will likely beat all other players and "knocks" on the table. Once a knock has been made, all other players get one more turn to exchange cards before the showdown where all players reveal their hands and compare values.</p>
+                            <h2>Scoring:</h2>
+                            <p>Aces: 11 points; Face-cards :10 points; all other cards count their face value</p>
+                            <p>If the player who knocked does not have the highest scoring hand at the showdown, they lose a chip to the pot.  However, if they do have the highest scoring hand, the player with the lowest hand loses a chip to the pot instead.</p>
+                            <p>If there is a tie for the highest score, the player with the highest-ranking card(s) wins. [e.g. K, Q, 6 (total 26) would beat Q, 9, 7 (also 26)]</p>
+                            <p>If at any point a player holds exactly 31 points during the game, or obtains three aces (worth 32 points), the game immediately ends and all other players lose a chip to the pot.</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12 clearfix">
+                            <div class="float-right">
+                                <button class="button" id="big_close_menu_rules">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Mobile not supported -->
+<div class="shadowbox" id="mobile_viewer_shadow_box">
+</div>
+<div class="shadow-content-container" id="mobile_viewer">
+    <div class="inner-shadow">
+        <div class="bubble-border">
+            <div class="row">
+                <div class="col-12">
+                    <h2 class="tac">Desktop Support Only</h2>
+                      <p>Sorry, this website cannot be viewed from a mobile device. Please check us out from a laptop or desktop computer!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Taunt bubbles -->
+<div class="taunt-bubble" id="taunt-bubble">
+    <div class="bdr-arrow"></div>
+    <div class="bubble-arrow"></div>
+    <div class="text" id="taunt-text"></div> <!-- text for taunt goes in this line -->
+</div>
+
+<div class="taunt-bubble" id="taunt-bubble-extra">
+    <div class="bdr-arrow"></div>
+    <div class="bubble-arrow"></div>
+    <div class="text" id="taunt-text-extra"></div> <!-- text for taunt goes in this line -->
+</div>
+
+
+<div class="taunt-bubble red-text" id="error">
+    <div class="bdr-arrow"></div>
+    <div class="bubble-arrow"></div>
+    <div class="text" id="error-text"></div>
+</div>

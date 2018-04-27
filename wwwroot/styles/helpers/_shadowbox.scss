@@ -1,0 +1,52 @@
+.shadowbox{
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 0.5;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    display: none;
+    z-index: 1000;
+}
+.shadow-content-container{
+    position: fixed;
+    top: 25%;
+    left: 50%;
+    max-width: 700px;
+    width: 50%;
+    max-height: 600px;
+    margin: 0 auto;
+    display: none;
+    z-index: 1001;
+    .inner-shadow{
+        position: relative;
+        top: 0;
+        left: -50%;
+        padding: 20px;
+        .bubble-border{
+            width: 100%;
+            height: auto;
+            background-color: $t-gray;
+            border: 11px solid $b-blue;
+            color: $b-blue;
+        }
+    }
+}
+.game-rules{
+    max-width: 1130px;
+    width: 75%;
+    top: 94px;
+    .inner-shadow{
+
+        .bubble-border{
+            overflow: scroll;
+            max-height: 500px;
+            padding: 25px;
+            overflow-x: hidden;
+        }
+    }
+}
+.shadow-bubble{
+    padding: 20px 20px 20px 20px;
+}
